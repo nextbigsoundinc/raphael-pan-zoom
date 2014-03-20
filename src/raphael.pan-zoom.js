@@ -86,7 +86,8 @@
                 deltaX = 0,
                 deltaY = 0,
                 mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel";
-
+            
+            this.enableScroll = true;
             this.enabled = false;
             this.dragThreshold = 5;
             this.dragTime = 0;
@@ -168,7 +169,7 @@
             this.applyZoom = applyZoom;
             
             function handleScroll(e) {
-                if (!me.enabled) {
+                if (!me.enabled || !me.enableScroll) {
                     return false;
                 }
                 var evt = window.event || e,
