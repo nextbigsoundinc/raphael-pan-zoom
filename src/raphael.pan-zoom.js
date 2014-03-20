@@ -86,9 +86,9 @@
                 deltaX = 0,
                 deltaY = 0,
                 mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel";
-            
-            this.enableScroll = true;
+
             this.enabled = false;
+            this.enableScroll = true;
             this.dragThreshold = 5;
             this.dragTime = 0;
     
